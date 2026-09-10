@@ -14,12 +14,9 @@ companies_preference = {
 
 matches = {}
 workers = list(workers_preference.keys())
-
 while workers:
     worker = workers.pop(0)
-    #print(worker)
     top_choice = workers_preference[worker].pop(0)
-    #print(top_choice)
     if top_choice in matches:
         current_worker = matches[top_choice]
         worker_rank = companies_preference[top_choice].index(worker)
@@ -30,6 +27,5 @@ while workers:
         else:
             workers.append(worker)
     else:
-            matches[top_choice] = worker
-
+        matches[top_choice] = worker
 print(matches)
