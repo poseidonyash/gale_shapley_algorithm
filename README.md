@@ -7,11 +7,20 @@ I created the algorithm using the stable matching problem and compared it with y
 ## Results
 
 ### Greedy (First-Come, First-Served) Results: 
-- Avg Worker Rank: 44.20
-- Avg Company Rank: 258.52
+- Fill Rate: 85.2%
+- Total GMV: $41,122,141.14
+- Avg Worker Rank: 35.86
+- Avg Company Rank: 277.85
 
 ### Gale-Shapley Results:
-- Avg Worker Rank: 24.39
-- Avg Company Rank: 106.79
+- Fill Rate: 99.8%
+- Total GMV: $49,893,493.99
+- Avg Worker Rank: 112.54
+- Avg Company Rank: 72.87
 
-Turns out Gale-Shapley is a great algorithm to implement as a worker is better off and matches with a company of higher preference and it is the same with companies they match with workers they prefer more. 
+Gale-Shapley implementation captured an additional $8.77 million in transaction volume and pushed the fill rate to near-perfect equilibrium. In the Greedy model, early applicants snatch up high-budget companies regardless of their own reserve wage. This exhausts the market's available capital early, stranding the top-tier, high-wage talent later in the queue. By allowing deferred acceptance, the algorithm acts as a highly efficient order book, continually reallocating capital until supply and demand match at optimal clearing prices.
+
+### Survivorship bias:
+
+At first glance, the Greedy algorithm seems vastly superior for workers, granting them an average rank of 35 versus Gale-Shapley's 112. That 35 average only accounts for the 85.2% of workers who actually secured a job. The 15% who failed to match aren't included in this metric thus making the results more appealing. 
+
