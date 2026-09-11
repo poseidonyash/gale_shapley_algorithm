@@ -1,16 +1,5 @@
 import numpy as np 
-
-workers_preference = {
-    "worker A": ["Google", "Microsoft", "Apple"], 
-    "worker B": ["Google", "Microsoft", "Apple"],  
-    "worker C": ["Apple", "Google", "Microsoft"]
-}
-
-companies_preference = {
-    "Google": ["worker A", "worker B", "worker C"], 
-    "Microsoft": ["worker B", "worker A", "worker C"], 
-    "Apple": ["worker C", "worker B", "worker A"]
-}
+from data_generator import workers_preference, companies_preference
 
 def gale_shapley(workers_pref, companies_pref): 
     matches = {}
@@ -29,5 +18,5 @@ def gale_shapley(workers_pref, companies_pref):
                 workers.append(worker)
         else:
             matches[top_choice] = worker
-    print(matches)
+    return matches
 gale_shapley(workers_preference, companies_preference)
