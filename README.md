@@ -25,4 +25,3 @@ Gale-Shapley implementation captured an additional $8.77 million in transaction 
 At first glance, the Greedy algorithm seems vastly superior for workers, granting them an average rank of 35 versus Gale-Shapley's 112. That 35 average only accounts for the 85.2% of workers who actually secured a job. The 15% who failed to match aren't included in this metric thus making the results more appealing. 
 
 ![Greedy vs Gale-Shapley distribution](images/greedy-vs-gale-shapley.png)
-C:\Users\praja\Desktop\yp\gale_shapley_algorithm\images\greedy vs gale-shapley distribution.png
